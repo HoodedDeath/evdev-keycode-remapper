@@ -196,7 +196,8 @@ if [[ "x${profs[$prof]}" != "xdefault" ]]; then
 					case $code_yn in
 						[Yy] )
 							# Open keycode list file in selected graphical editor and detach process
-							$GRAPHICAL_EDITOR /usr/share/evdev-keycode-remapper/keycodes </dev/null *>/dev/null &
+							$GRAPHICAL_EDITOR /usr/share/evdev-keycode-remapper/keycodes &
+							disown
 							break;;
 						[Nn] ) break;;
 						* ) echo "Please answer yes or no"
