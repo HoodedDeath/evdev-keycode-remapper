@@ -12,7 +12,7 @@ if [[ -f "/etc/udev/hwdb.d/${calias}-keys.hwdb" ]]; then
 	rm "/etc/udev/hwdb.d/${calias}-keys.hwdb"
 fi
 IFS=$'\n'
-arr=($(cat "prof_file"))
+arr=($(cat "$prof_file"))
 unset IFS
 echo "evdev:${alias}" > "/etc/udev/hwdb.d/${calias}-keys.hwdb"
 for i in ${!arr[@]}; do
