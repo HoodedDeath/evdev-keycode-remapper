@@ -14,7 +14,7 @@ fi
 IFS=$'\n'
 arr=($(cat "$prof_file"))
 unset IFS
-echo "evdev:${alias}" > "/etc/udev/hwdb.d/${calias}-keys.hwdb"
+echo "evdev:${alias}*" > "/etc/udev/hwdb.d/${calias}-keys.hwdb"
 for i in ${!arr[@]}; do
 	if [[ ! -z "${arr[$i]}" ]] && [[ "${arr[$i]}" != "#"* ]]; then
 		echo "  ${arr[$i]}" >> "/etc/udev/hwdb.d/${calias}-keys.hwdb"
