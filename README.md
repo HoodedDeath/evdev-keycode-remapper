@@ -10,10 +10,6 @@ To install manually, copy `evdev-keycode-remapper.sh` and `apply_script_evdev-ke
 
 Note: A polkit authentication agent is required for applying profiles
 
-### AUR Package
-
-AUR package link to be added
-
 ## Usage
 
 Simply run `evdev-keycode-remapper` and the script will prompt you for everything needed. Applying a profile to a device requires super user access, so polkit agent will prompt you when applying a profile
